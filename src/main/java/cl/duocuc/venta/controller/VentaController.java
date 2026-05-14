@@ -31,19 +31,19 @@ public class VentaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
-    // Obtener venta por ID
+    // Obtener x ID
     @GetMapping("/{id}")
     public ResponseEntity<VentaResponse> obtenerVentaPorId(@PathVariable Long id) {
         return ResponseEntity.ok(ventaService.obtenerVentaPorId(id));
     }
 
-    // Actualizar venta
+    // Actualizar x id
     @PutMapping("/{id}")
     public ResponseEntity<VentaResponse> actualizarVenta(@PathVariable Long id, @Valid @RequestBody VentaRequest request) {
         return ResponseEntity.ok(ventaService.actualizarVenta(id, request));
     }
 
-    // Eliminar venta
+    // Eliminar x id
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarVenta(@PathVariable Long id) {
         ventaService.eliminarVenta(id);
